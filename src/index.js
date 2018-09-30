@@ -18,7 +18,7 @@ class Board extends React.Component {
         return (
             <Square 
                 value={this.props.squares[i]}
-                onClick={() => this.props.handleClick(i)}
+                onClick={() => this.props.onClick(i)}
             />
         );
     }
@@ -51,7 +51,7 @@ class Game extends React.Component {
         super(props);
         this.state = {
             history: [{
-                square: Array(9).fill(null),
+                squares: Array(9).fill(null),
             }],
             xIsNext: true,
         }
